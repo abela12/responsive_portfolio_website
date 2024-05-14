@@ -23,7 +23,10 @@
     }
     .service{
         flex-direction: column;
-        padding: 10px;
+        padding: 50px 10px 0 10px;
+    }
+    .service__icon{
+        display: none;
     }
     .service__title,.project__title{
         display: flex;
@@ -31,6 +34,11 @@
         text-align: start;
         font-size: 1rem;
     }
+    .service__item:hover {
+        background: var(--primary-gradient-hover);
+        color: var(--white-secondary);
+        border: none;
+      }
     .project{
         padding: 0;
     }
