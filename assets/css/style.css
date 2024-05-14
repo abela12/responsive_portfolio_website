@@ -4,7 +4,7 @@
   --white-primary: #f0f2f5;
   --white-secondary: #ffffff;
   --black-primary: #161513;
-  --black-secondary: #1c1c22;
+  --black-secondary: #0F2133;
   --gray-hover: rgb(37, 37, 37);
   --primary-gradient: linear-gradient(
     90deg,
@@ -34,23 +34,28 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--white-secondary);
-  color: var(--black-primary);
+  background-color: var(--black-secondary);
+  color: var(--white-primary);
   margin: 0;
   padding: 0;
 }
-body.aos-init {
-  overflow-x: hidden;
-  overflow-y: hidden;
+body.light-mode {
+  background-color: var(--white-primary);
+  color: var(--black-secondary);
 }
 
+body.light-mode a {
+  color: var(--black-secondary) !important;
+}
+body.light-mode .btn-dark {
+  color: var(--white-primary) !important;
+}
 header {
-  background-color: var(--white-primary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 100vh;
 }
 a{
-  color: var(--black-primary);
+  color: var(--white-primary);
 }
 /* Utility Class */
 .container {
@@ -65,6 +70,7 @@ a{
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: inline-block;
+  margin-top: 20px;
 }
 .btn-dark {
   background: var(--black-primary);
@@ -85,6 +91,39 @@ a{
   display: flex;
 justify-content: space-between;
 }
+.cursor-pointer{
+  cursor: pointer;
+}
+/* Theme Toggle */
+.theme-toggle__input {
+  display: none;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle__input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-toggle__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle__input:checked + .theme-toggle .theme-toggle__icon {
+  content: "☀️";
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -103,13 +142,9 @@ justify-content: space-between;
   margin-right: 20px;
 }
 .navbar__menu ul li a {
-  color: var(--black-primary);
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
-}
-.navbar__menu ul li a:hover {
-  color: var(--black-secondary);
 }
 
 /* Hamburger Button */
@@ -125,7 +160,7 @@ justify-content: space-between;
 .navbar__hamburger-line {
   width: 30px;
   height: 3px;
-  background: var(--black-primary);
+  background: var(--white-primary);
   margin: 6px 0;
 }
 /* Mobile Menu */
@@ -136,7 +171,7 @@ justify-content: space-between;
   width: 250px;
   height: 100%;
   z-index: 100;
-  background: var(--white-primary);
+  background: var(--black-primary);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
 }
@@ -213,6 +248,7 @@ justify-content: space-between;
   border-bottom: var(--black-primary) 2px solid;
   border-top: var(--black-primary) 2px solid;
   padding: 20px 10px;
+  cursor: pointer;
 }
 .service__item-web-design {
   border: none;
@@ -222,14 +258,12 @@ justify-content: space-between;
 }
 .service__item:hover {
   background: var(--primary-gradient-hover);
-  scale: 1.1;
   color: var(--white-secondary);
   border: none;
 }
 /* Project */
 .project {
   padding: 50px 0;
-  background-color: var(--white-primary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .project__title {
@@ -255,7 +289,7 @@ justify-content: space-between;
 .project__item {
   flex: 0 0 calc(33.33% - 20px); /* Subtract the gap size from the width */
   max-width: calc(33.33% - 20px); /* Subtract the gap size from the max-width */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.644);
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -305,16 +339,18 @@ justify-content: space-between;
 .footer{
   padding: 50px 0;
   text-align: center;
-  background: var(--white-primary);
+  /* background: var(--black-primary); */
 }
 .footer__content{
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  border-top: var(--black-primary) 2px solid;
+  border-top: var(--white-primary) 2px solid;
+  color: var(--white-primary);
 }
 .footer__logo img{
   width: 150px;
+  height: 50px;
   object-fit: cover;
 }
 .footer__menu ul{
