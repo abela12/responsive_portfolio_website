@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/aos.css" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -22,7 +25,7 @@
             <!-- Nav -->
             <nav class="navbar">
                 <div class="navbar__logo">
-                    <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    <a href="index.html"><img src="assets/images/logo_white.png" alt=""></a>
                 </div>
                 <div class="navbar__menu">
                     <ul>
@@ -32,6 +35,15 @@
                     </ul>
                 </div>
                 <!-- Hamburger Button -->
+                <li>
+                    <!-- Theme -->
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-toggle__switch" class="theme-toggle__input" />
+                        <label for="theme-toggle__switch" class="theme-toggle__label">
+                            <span class="theme-toggle__icon">🌙</span>
+                        </label>
+                    </div>
+                </li>
                 <button class="navbar__hamburger-button">
                     <div class="navbar__hamburger-line"></div>
                     <div class="navbar__hamburger-line"></div>
@@ -133,7 +145,7 @@
                     <img src="assets/images/project/restaurant_reservation_system.png" alt="">
                     <div class="project__item-content">
                         <h2 class="project__item-title">Restaurant Reservation System</h2>
-                        <p class="project__item-text">"A system to book tables at a restaurant and manage reservations.
+                        <p class="project__item-text">A system to book tables at a restaurant and manage reservations.
                         </p>
                     </div>
                 </div>
@@ -238,14 +250,13 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    <a href="index.html"><img src="assets/images/logo_white.png" alt=""></a>
                 </div>
                 <div class="footer__menu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#project">Services</a></li>
                     </ul>
                 </div>
             </div>
@@ -273,6 +284,15 @@
                     mobileMenu.classList.remove('active');
                 }
             })
+            const themeSwitch = document.querySelector('#theme-toggle__switch');
+            const icon = document.querySelector('.theme-toggle__icon');
+            const logo = document.querySelector('.navbar__logo img');
+            
+            themeSwitch.addEventListener('change', function() {
+                document.body.classList.toggle('light-mode');
+                icon.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+                logo.src = document.body.classList.contains('light-mode') ? 'assets/images/logo_dark.png' : 'assets/images/logo_white.png';
+            });
         });
     </script>
 </body>
