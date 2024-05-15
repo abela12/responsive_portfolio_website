@@ -256,7 +256,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#service">Service</a></li>
-                        <li><a href="#project">Services</a></li>
+                        <li><a href="#project">Project</a></li>
                     </ul>
                 </div>
             </div>
@@ -286,12 +286,14 @@
             })
             const themeSwitch = document.querySelector('#theme-toggle__switch');
             const icon = document.querySelector('.theme-toggle__icon');
-            const logo = document.querySelector('.navbar__logo img');
-            
+            const navbarLogo = document.querySelector('.navbar__logo img');
+            const footerLogo = document.querySelector('.footer__logo img');
+
             themeSwitch.addEventListener('change', function() {
                 document.body.classList.toggle('light-mode');
                 icon.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
-                logo.src = document.body.classList.contains('light-mode') ? 'assets/images/logo_dark.png' : 'assets/images/logo_white.png';
+                navbarLogo.src = document.body.classList.contains('light-mode') ? 'assets/images/logo_dark.png' : 'assets/images/logo_white.png';
+                footerLogo.src = document.body.classList.contains('light-mode') ? 'assets/images/logo_dark.png' : 'assets/images/logo_white.png';
             });
         });
     </script>
