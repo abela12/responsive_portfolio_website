@@ -1,63 +1,64 @@
 /* Mobile Screen */
-@media(max-width : 768px){
-    .container{
-        padding: 0 1rem;
-    }
-    .navbar{
-        padding: 0;
-    }
-    .navbar__menu{
-        display: none;
-    }
-    .navbar__hamburger-button {
-        display: block;
-      }
-      .hero{
-        padding: 0;
-      }
-    .hero__title{
-        font-size: 1rem;
-    }
-    .btn{
-        margin-bottom:1rem;
-    }
-    .service{
-        flex-direction: column;
-        padding: 50px 10px 0 10px;
-    }
-    .service__icon{
-        display: none;
-    }
-    .service__title,.project__title{
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        font-size: 1rem;
-    }
-    .service__item:hover {
-        background: var(--primary-gradient-hover);
-        color: var(--white-secondary);
-        border: none;
-      }
-    .project{
-        padding: 0;
-    }
-    .project__content{
-        flex-direction: column;
-    }
-    .project__item{
-        max-width: 100%;
-    }
-    .about{
-        padding: 10px;
-    }
-    .about_me{
-        grid-template-columns: 1fr;
-    }
-    .d-flex{
-        flex-direction: column;
-    }
-    .footer__content{
-        flex-direction: column;
-    }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__hamburger-button {
+    display: block;
+  }
+  .hero {
+    padding: 0;
+  }
+  .hero__title {
+    font-size: 1rem;
+  }
+  .btn {
+    margin-bottom: 1rem;
+  }
+  .service {
+    flex-direction: column;
+    padding: 50px 10px 0 10px;
+  }
+  .service__icon {
+    display: none;
+  }
+  .service__title,
+  .project__title {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 1rem;
+  }
+  .service__item:hover {
+    background: var(--primary-gradient-hover);
+    color: var(--white-secondary);
+    border: none;
+  }
+  .project {
+    padding: 0;
+  }
+  .project__content {
+    flex-direction: column;
+  }
+  .project__item {
+    max-width: 100%;
+  }
+  .about {
+    padding: 10px;
+  }
+  .about_me {
+    grid-template-columns: 1fr;
+  }
+  .d-flex {
+    flex-direction: column;
+  }
+  .footer__content {
+    flex-direction: column;
+  }
 }
