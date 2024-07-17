@@ -5,7 +5,8 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🔗 [Assets](#assets)
-   
+<img src="https://github.com/abela12/responsive_portfolio_website/blob/main/assets/images/screencapture-abela12-github-io-responsive-portfolio-website-2024-07-17-16_06_23%20(2).png">
+
 ##  Introduction
 
 Develop a Responsive portfolio website.
